@@ -1,0 +1,8 @@
+output/
+input/
+normalizer-cli/target/
+normalizer-core/target/
+target/
+out/
+.idea/
+out2/
