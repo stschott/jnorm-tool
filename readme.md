@@ -19,7 +19,7 @@ jNorm additionally employs a normalization of target level differences.
 The designed difference removal range supports Java versions 5-8 and 11.
 
 # Building jNorm
-To build jNorm from its sourc code run the following command:
+To build jNorm from its source code run the following command:
 ```
 mvn package assembly:single
 ```
