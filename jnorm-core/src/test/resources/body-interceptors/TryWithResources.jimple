@@ -1,0 +1,47 @@
+public class TryWithResources extends java.lang.Object
+{
+    public void <init>()
+    {
+        TryWithResource r0;
+        r0 := @this: TryWithResource;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    void doTryWithResources()
+    {
+        TryWithResource r0;
+        java.io.FileInputStream $r1;
+        java.io.IOException $r2, $r3;
+        int i0;
+        java.lang.String $s0;
+
+        r0 := @this: TryWithResource;
+        $r1 = new java.io.FileInputStream;
+        specialinvoke $r1.<java.io.FileInputStream: void <init>(java.lang.String)>("path/to/file");
+
+        label1:
+            i0 = virtualinvoke $r1.<java.io.FileInputStream: int read()>();
+            $s0 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>(i0);
+            staticinvoke <java.io.PrintStream: void println(java.lang.String)>(System.out, $s0);
+
+        label2:
+            goto label4;
+
+        label3:
+            $r2 := @caughtexception;
+            virtualinvoke $r2.<java.io.IOException: void printStackTrace()>();
+
+        label4:
+            if $r1 != null goto label5;
+            goto label6;
+
+        label5:
+            virtualinvoke $r1.<java.io.FileInputStream: void close()>();
+
+        label6:
+            return;
+
+        catch java.io.IOException from label1 to label2 with label3;
+    }
+}

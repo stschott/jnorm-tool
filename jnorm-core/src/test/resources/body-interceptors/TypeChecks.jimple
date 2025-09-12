@@ -1,0 +1,38 @@
+public class TypeChecks extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        TypeChecks r0;
+
+        r0 := @this: TypeChecks;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void castToByte()
+    {
+        short s0;
+        java.lang.Object obj;
+        java.lang.Integer i4, i1;
+        int temp;
+        TypeChecks r0;
+
+        r0 := @this: TypeChecks;
+
+        s0 = 128;
+
+        obj = (java.lang.Object) s0;
+        i4 = (java.lang.Integer) obj;
+
+        temp = virtualinvoke i4.<java.lang.Integer: int intValue()>();
+        temp = temp + 1;
+
+        i1 = new java.lang.Integer;
+        specialinvoke i1.<java.lang.Integer: void <init>(int)>(temp);
+
+        return;
+    }
+}

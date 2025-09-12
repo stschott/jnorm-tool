@@ -1,0 +1,21 @@
+public class NullChecks extends java.lang.Object
+{
+    public void <init>()
+    {
+        NullChecks r0;
+        r0 := @this: NullChecks;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public void performNullChecks()
+    {
+        java.lang.String r0;
+
+        r0 = "foo";
+
+        staticinvoke <java.util.Objects: java.lang.Object requireNonNull(java.lang.Object)>(r0);
+
+        return;
+    }
+}

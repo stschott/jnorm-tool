@@ -1,0 +1,35 @@
+class EmptyTryCatch
+{
+    public void <init>()
+    {
+        EmptyTryCatch r0;
+        r0 := @this: EmptyTryCatch;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    void doEmptyTryCatch() {
+        java.io.FileInputStream $r2;
+        java.lang.Throwable $r3;
+        java.lang.Exception $r4;
+
+        label1:
+            $r2 = new java.io.FileInputStream;
+            specialinvoke $r2.<java.io.FileInputStream: void <init>(java.lang.String)>("file_path");
+            virtualinvoke $r2.<java.io.FileInputStream: void close()>();
+            goto label4;
+
+        label2:
+            $r3 := @caughtexception;
+
+        label3:
+            $r4 := @caughtexception;
+
+        label4:
+            return;
+
+        catch java.lang.Throwable from label1 to label2 with label2;
+        catch java.lang.Exception from label1 to label3 with label3;
+    }
+}

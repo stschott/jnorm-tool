@@ -1,0 +1,19 @@
+enum class Outer
+{
+
+    private void <init>()
+    {
+        Outer r0;
+        r0 := @this: Outer;
+
+        specialinvoke r0.<Outer$Inner: void <init>(Outer$1)>(null);
+        return;
+    }
+
+    boolean shouldDrainBuffers()
+    {
+        Outer r0;
+        r0 := @this: Outer;
+        return 0;
+    }
+}

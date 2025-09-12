@@ -1,0 +1,6 @@
+class Outer$Inner extends java.lang.Object
+{
+    private void <init>()
+    {
+    }
+}

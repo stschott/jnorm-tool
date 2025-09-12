@@ -6,3 +6,24 @@ target/
 out/
 .idea/
 out2/
+
+# Benchmark and test outputs
+/stats/
+temp/
+**/test/resources/benchmark/
+
+# Logs
+*.log
+logs/
+
+# IDE specific files
+*.iml
+*.iws
+*.ipr
+.settings/
+.classpath
+.project
+
+# OS specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,32 @@
+public class CharSequenceToString extends java.lang.Object
+{
+    public void <init>()
+    {
+        CharSequenceToStringExample r0;
+        r0 := @this: CharSequenceToStringExample;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public void print()
+    {
+        CharSequenceToStringExample r0;
+        java.lang.StringBuffer stringBuffer;
+        java.lang.CharSequence text;
+        java.lang.String r1;
+
+        r0 := @this: CharSequenceToStringExample;
+
+        // Create an instance of StringBuffer which implements CharSequence
+        stringBuffer = new java.lang.StringBuffer;
+        specialinvoke stringBuffer.<java.lang.StringBuffer: void <init>(java.lang.String)>("Example");
+
+        // Cast StringBuffer to CharSequence
+        text = (java.lang.CharSequence) stringBuffer;
+
+        // Use InterfaceInvokeExpr for toString() on CharSequence
+        r1 = interfaceinvoke text.<java.lang.CharSequence: java.lang.String toString()>();
+
+        return;
+    }
+}

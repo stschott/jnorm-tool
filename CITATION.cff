@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: jNorm
+message: 'If you use jNorm, please cite it as below.'
+type: software
+authors:
+  - given-names: Stefan Schott
+repository-code: 'https://github.com/stschott/jnorm-tool'
+version: 2.0.0
+date-released: '2025-09-12'
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Schott"
+    given-names: "Stefan"
+  - family-names: "Ponta"
+    given-names: "Serena Elisa"
+  - family-names: "Fischer"
+    given-names: "Wolfram"
+  - family-names: "Klauke"
+    given-names: "Jonas"
+  - family-names: "Bodden"
+    given-names: "Eric"
+  doi: "10.4230/LIPIcs.ECOOP.2024.37"
+  booktitle: "T38th European Conference on Object-Oriented Programming (ECOOP 2024)"
+  start: 37:1
+  end: 37:29
+  title: "Java Bytecode Normalization for Code Similarity Analysis"
+  year: 2024

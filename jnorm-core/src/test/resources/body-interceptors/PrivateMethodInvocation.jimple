@@ -1,0 +1,24 @@
+public class PrivateMethodInvocation extends java.lang.Object
+{
+    public void <init>()
+    {
+        PrivateMethodInvocation r0;
+        r0 := @this: PrivateMethodInvocation;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public void callPrivateMethods()
+    {
+        PrivateMethodInvocation r0;
+        r0 := @this: PrivateMethodInvocation;
+
+        virtualinvoke r0.<PrivateMethodInvocation: void privateMethod()>();
+        return;
+    }
+
+    private void privateMethod()
+    {
+        return;
+    }
+}

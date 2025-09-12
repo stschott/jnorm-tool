@@ -1,0 +1,84 @@
+public class Arithmetic extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        Arithmetic r0;
+
+        r0 := @this: Arithmetic;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void filterOutNumbersBelowFifty()
+    {
+        java.lang.Integer $r3;
+        java.util.ArrayList r1, $r6;
+        int $i0, i1, $i3;
+        java.lang.Object $r2;
+        Arithmetic r5;
+
+        r5 := @this: Arithmetic;
+
+        $r6 = new java.util.ArrayList;
+
+        specialinvoke $r6.<java.util.ArrayList: void <init>()>();
+
+        r1 = $r6;
+
+        i1 = interfaceinvoke r1.<java.util.List: int size()>();
+
+     label1:
+        $i3 = (int) -1;
+
+        i1 = i1 + $i3;
+
+        if i1 < 0 goto label2;
+
+        $r2 = interfaceinvoke r1.<java.util.List: java.lang.Object get(int)>(i1);
+
+        $r3 = (java.lang.Integer) $r2;
+
+        $i0 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        if $i0 >= 50 goto label1;
+
+        interfaceinvoke r1.<java.util.List: java.lang.Object remove(int)>(i1);
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    public void decrementMultipleLocals()
+    {
+        int i0, i1, i2, i3;
+        r5 := @this: Arithmetic;
+
+        i0 = 7;
+        i1 = 9;
+
+    label1:
+        i2 = (int) -1;
+        i0 = i0 + i2;
+        i3 = (int) -1;
+        i1 = i1 + i3;
+
+        if i0 >= 0 goto label1;
+        return;
+    }
+
+    public void nestedAddition()
+    {
+        int i1, i2, $t0, $t1;
+
+        $t0 = (int) -5;
+        $t1 = i1 + $t0;
+        i1 = $t1 + i2;
+
+        return;
+    }
+}
